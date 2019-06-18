@@ -1,0 +1,39 @@
+<!-- ตอนที่ 7 รู้จักกับ (Callback Function) -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <style>
+        body {
+            text-align: center;
+            padding-top: 20px;
+        }
+        p {
+            width: 500px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <button>Hide</button><br><br>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae temporibus enim ab ipsa incidunt repellendus quisquam, provident, voluptatem natus consequuntur veritatis, cupiditate dolore totam recusandae doloribus! Nulla odio quibusdam non?Placeat maiores, tempore molestias debitis ipsa eius vitae recusandae dolorem possimus ea est accusamus doloribus quaerat reprehenderit et libero enim tempora, obcaecati provident! Aliquid assumenda voluptates velit incidunt autem alias?</p>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
+    <script>
+        // ทำการซ่อนแล้ว อาเลิทจะแสดงขึ้นมา
+        $(document).ready(function () {
+            $("button").click(function () {
+// แบบไม่มี Callback function ยังไม่ได้ทำงานก็ขึ้นอาเลิทมาแล้ว
+                // $("p").hide(1000);
+                //     alert("The paragraph is now hidden");
+// แบบมี Callback function ทำงานก่อรแล้วค่อยขึ้นอาเลิท
+                $("p").hide("slow", function () {
+                    alert("The paragraph is now hidden");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,52 @@
+<!-- ตอนที่ 2 การใช้งานเอฟเฟค (Hide & Show) -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title>
+<!-- "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <style>
+        /* (3) */
+        .container {
+            width: 900px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- (2) -->
+    <div class="container">
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="selector">Selector</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet est totam blanditiis autem minus a nam ipsum. Ex nulla laudantium placeat dolor atque nobis, voluptates hic dignissimos rem! Corporis, fuga!Enim inventore mollitia minima placeat veritatis ex itaque voluptatum voluptatibus dicta id quas excepturi, fugit officiis modi aliquam, quia hic amet in error eveniet rerum culpa. Quis iure possimus maxime!</p>
+    </div>
+    <!-- (1) ดาวน์โหลดลิงค์จาก jQuery CDN --> 
+    <script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"></script>    
+    <script>
+        $(document).ready(function() {
+        //alert('Hello'); ตรวจสอบเล่นๆ
+        //(4) เมื่อทำการคลิ๊กปุ่ม hide ข้อความ p จะหายไป
+            $("#hide").click(function () {
+                $("p").hide(1000); //1 วินาที
+            });
+        // เมื่อทำการคลิ๊กปุ่ม show ข้อความ p จะแสดง
+            $("#show").click(function () {
+                $("p").show(1000);
+            });
+    // ================================================
+        // (5)แบบที่ 1 รวม 2 แบบ ในปุ่มเดียวกัน ซ่อน กับ แสดง
+            $("#toggle").click(function () { 
+                $("p").toggle(1000);
+            });
+        // (6)แบบที่ 2
+            $("#selector").click(function () {
+                $("p").toggle(1000);
+            });
+            $(selector).hide(speed, callback);
+        });
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,55 @@
+ตอนที่ 1 พื้นฐานเจคิวรี่
+    - เป็น library ของ javascript
+    - jQuery ทำมาจาก javascript
+    - ก่อนเรียน jQuery ต้องรู้ภาษา HTML, CSS, JavaScript มาก่อน
+การใส่ jQuery ไว้บนหน้าเว็บเพจ
+    - ดาวน์โหลดจากเว็บบไซต์ jQuery.com
+    <head>
+        <script src="jquery-3.2.1.min.js"></script>
+    </head>
+    - ลิงค์ CDN ทีจริงมีหลายเจ้า แต่หลักๆจะเป็นของ google
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+jQuery Syntax => $(selector).action()
+    - $(this).hide()     => current element
+    - $("p").hide()      => <p>
+    - $(".test").hide()  => class="test"
+    - $("#test").hide()  => id="test"
+The Document Ready Event
+        $(document).ready(function() {
+            // jQuery method go here...
+        });
+        <!-- ====================== -->
+        $(function() {
+            // jQuery method go here...
+        });
+jQuery Selectors
+- $("p") => เลือกแท็ก p ทั้งหมด
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide();
+            });
+        });
+<!-- ====================================== -->
+- $("#test")
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#test").hide();
+            });
+        });
+<!-- ====================================== -->
+- $(".test")
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".test").hide();
+            });
+        });
+jQuery Syntax for event method
+- $("p").click();
+        $("p").click(function() {
+            $("p").hide();
+        });
+
+
+        

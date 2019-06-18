@@ -1,0 +1,52 @@
+<!-- ตอนที่ 6 การใช้งาน (Stop Animation) -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <style>
+        body {
+            text-align: center;
+            padding-top: 20px; 
+        }
+        #flip {
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            width: 500px;
+            height: 30px;
+            background: green;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+         #panel {
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            width: 500px;
+            height: auto;
+            background: green;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="stop">Stop Sliding</button><br><br>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus fugiat voluptas aperiam et voluptatum architecto dicta blanditiis est similique debitis odio ratione, modi corporis accusantium iure reprehenderit nihil? Rem.Voluptatibus, odit autem saepe facere adipisci, blanditiis quidem amet tempore quos animi qui deleniti minus earum suscipit dolorem soluta ut sapiente! Laudantium illum eum similique voluptatum nemo et. Quas, accusantium!</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
+    <script>
+         $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideDown(5000);
+            });
+            $("#stop").click(function () {
+                $("#panel").stop();
+            });
+         });
+    </script>
+</body>
+</html>
+
+
+
+
+
